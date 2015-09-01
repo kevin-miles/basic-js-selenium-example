@@ -2,13 +2,14 @@ var assert = require('assert'),
     test = require('selenium-webdriver/testing'),
     webdriver = require('selenium-webdriver'),
     chrome = require('selenium-webdriver/chrome'),
+    firefox = require('selenium-webdriver/firefox'),
     driver;
 
 test.describe('Google Search', function() {
   this.timeout(100000);
 
   test.before(function () {
-    driver = new chrome.Driver();
+    driver = new firefox.Driver();
   });
 
   test.after(function () {
