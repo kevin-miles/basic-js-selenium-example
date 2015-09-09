@@ -4,6 +4,8 @@ var test = require('selenium-webdriver/testing'),
     until = webdriver.until;
 test.describe('Google Search', function() {
   var driver;
+  this.timeout(100000);
+  
   test.before(function() {
     driver = new webdriver.Builder().forBrowser('firefox').build();
   });
