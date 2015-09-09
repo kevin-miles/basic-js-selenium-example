@@ -9,7 +9,9 @@ test.describe('Google Search', function() {
   this.timeout(100000);
 
   test.before(function () {
-    driver = new firefox.Driver();
+    var driver = new webdriver.Builder()
+        .forBrowser('firefox')
+        .build();
   });
 
   test.after(function () {
